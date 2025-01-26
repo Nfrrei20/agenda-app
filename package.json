@@ -1,13 +1,16 @@
 {
   "name": "agenda-app",
   "private": true,
+  "homepage": "https://Nfrrei20.github.io/agenda-app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

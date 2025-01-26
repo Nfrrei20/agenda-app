@@ -1,0 +1,285 @@
+/* Estilos de los grupos de entrada */
+.schedule-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Espacio entre cada grupo */
+  }
+  
+  /* Etiquetas */
+  .schedule-label {
+    font-size: 16px; /* Tamaño ligeramente más grande */
+    color: #333; /* Texto oscuro */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio entre la etiqueta y el input */
+    transition: color 0.3s;
+  }
+  
+  .schedule-label:hover {
+    color: #74b9ff; /* Cambia de color al pasar el mouse */
+  }
+  
+  /* Inputs */
+  .schedule-input {
+    padding: 15px; 
+    font-size: 16px; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    outline: none;
+    background: #fff; /* Fondo blanco */
+    color: #333; /* Color oscuro para el texto */
+    transition: all 0.3s;
+  }
+  
+  
+  .schedule-input:focus {
+    border-color: #74b9ff; /* Borde azul al enfocar */
+    box-shadow: 0 0 8px rgba(116, 185, 255, 0.5); /* Efecto de enfoque */
+    background: #fff; /* Fondo blanco */
+  }
+  
+  /* Inputs en hover */
+  .schedule-input:hover {
+    border-color: #a8dadc; /* Borde más claro al pasar el mouse */
+  }
+  
+  /* Botón */
+  .schedule-button {
+    padding: 15px 25px; /* Más espacio interno */
+    font-size: 18px; /* Texto más grande */
+    color: #fff;
+    background: linear-gradient(135deg, #74b9ff, #4da3f4); /* Degradado */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+  }
+  
+  .schedule-button:hover {
+    background: linear-gradient(135deg, #4da3f4, #74b9ff); /* Cambia el degradado */
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(74, 185, 255, 0.3);
+  }
+  
+  /* Inputs específicos (React DatePicker y Select) */
+  .react-datepicker__input-container input {
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #333; /* Asegurar color del texto */
+    outline: none;
+    transition: all 0.3s;
+  }
+  
+  .react-datepicker__input-container input:focus {
+    border-color: #74b9ff;
+    box-shadow: 0 0 8px rgba(116, 185, 255, 0.5);
+    background: #fff;
+  }
+  
+  .css-2b097c-container { /* Clase generada por react-select */
+    font-size: 16px;
+  }
+  
+  .css-1pahdxg-control { /* Estilo del contenedor en react-select */
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    color: #333; /* Asegurar color del texto */
+    transition: all 0.3s;
+  }
+  
+  .css-1pahdxg-control:hover {
+    border-color: #74b9ff;
+  }
+  
+  .css-1pahdxg-control--is-focused {
+    border-color: #74b9ff;
+    box-shadow: 0 0 8px rgba(116, 185, 255, 0.5);
+  }
+  
+  /* Contenedor principal */
+  .schedule-container {
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Evita el scroll innecesario */
+  }
+  
+  
+  /* Contenedor del contenido (formulario + imagen) */
+  .schedule-content {
+    display: flex;
+    flex: 1; /* Ocupa todo el ancho disponible */
+    height: 100vh; /* Asegura que ocupe toda la altura */
+    background: #fff;
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+  }
+  
+  /* Estilos del formulario */
+  
+  
+  .schedule-heading {
+    font-size: 3vw; /* Tamaño relativo al ancho */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+  }
+  
+  .schedule-input-group {
+    margin-bottom: 20px;
+  }
+  
+  .schedule-input {
+    padding: 15px;
+    font-size: 1.2vw; /* Ajuste escalable */
+  }
+  
+  .schedule-button {
+    padding: 15px;
+    font-size: 1.5vw; /* Botón más grande */
+    width: 100%; /* Botón ocupa todo el ancho */
+  }
+  
+  /* Estilos de la imagen */
+  .schedule-image-wrapper {
+    width: 50%; /* Ocupa el 50% restante */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+  }
+  
+  
+  
+  
+  @media (max-width: 1200px) {
+    .schedule-content {
+      flex-direction: column; /* Cambia a disposición vertical */
+      height: auto;
+    }
+  
+    .schedule-form-wrapper {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .schedule-image-wrapper {
+      width: 100%;
+      height: auto;
+    }
+  
+    .schedule-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px; /* Altura máxima para evitar que la imagen ocupe demasiado espacio */
+      object-fit: cover; /* Mantiene la imagen proporcional */
+    }
+  
+    .schedule-heading {
+      font-size: 6vw; /* Ajuste de tamaño de fuente para móviles */
+    }
+  
+    .schedule-input {
+      font-size: 4vw; /* Ajuste escalable en móviles */
+    }
+  
+    .schedule-button {
+      font-size: 4.5vw; /* Botón más grande en móviles */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .schedule-form-wrapper {
+      padding: 15px;
+    }
+  
+    .schedule-heading {
+      font-size: 7vw; /* Aumenta el tamaño del título en pantallas más pequeñas */
+    }
+  
+    .schedule-input {
+      font-size: 4.5vw;
+    }
+  
+    .schedule-button {
+      font-size: 5vw;
+    }
+  
+    .schedule-input-group {
+      margin-bottom: 15px; /* Reduce el espacio en móviles */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .schedule-content {
+      padding: 10px;
+    }
+  
+    .schedule-form-wrapper {
+      padding: 10px;
+    }
+  
+    .schedule-image-wrapper {
+      display: none; /* Oculta la imagen en pantallas muy pequeñas para priorizar el formulario */
+    }
+  
+    .schedule-heading {
+      font-size: 8vw;
+    }
+  
+    .schedule-input {
+      font-size: 5vw;
+    }
+  
+    .schedule-button {
+      font-size: 6vw;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .schedule-form-wrapper {
+    width: 50%; /* Ocupa el 50% del espacio horizontal */
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .schedule-image-wrapper {
+    width: 50%;
+    height: 100vh; /* Ocupa la mitad de la pantalla */
+  }
+  
+  .schedule-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  }
+  
