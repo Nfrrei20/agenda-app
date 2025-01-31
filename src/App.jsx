@@ -28,6 +28,7 @@ const ScheduleAppointment = () => {
     { value: "09:00", label: "09:00 AM" },
     { value: "10:00", label: "10:00 AM" },
     { value: "11:00", label: "11:00 AM" },
+    { value: "12:00", label: "12:00 PM" },
     { value: "14:00", label: "02:00 PM" },
     { value: "15:00", label: "03:00 PM" },
     { value: "16:00", label: "04:00 PM" },
@@ -138,21 +139,21 @@ const ScheduleAppointment = () => {
         <div className="schedule-form-wrapper">
           <h2 className="schedule-heading">Agenda Tu Hora</h2>
           <form onSubmit={handleSubmit} className="schedule-form">
-            <div className="schedule-input-group">
+          <div className="schedule-input-group">
               <label className="schedule-label">Nombre del paciente</label>
-              <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} className="schedule-input" required />
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} className="schedule-input" placeholder="Ingrese el nombre" required />
             </div>
             <div className="schedule-input-group">
               <label className="schedule-label">Apellidos del paciente</label>
-              <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} className="schedule-input" required />
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} className="schedule-input" placeholder="Ingrese los apellidos" required />
             </div>
             <div className="schedule-input-group">
               <label className="schedule-label">Correo</label>
-              <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="schedule-input" required />
+              <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="schedule-input" placeholder="Ingrese su correo" required />
             </div>
             <div className="schedule-input-group">
               <label className="schedule-label">Teléfono</label>
-              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="schedule-input" required />
+              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="schedule-input" placeholder="Ingrese su teléfono" required />
             </div>
             <div className="schedule-input-group">
               <label className="schedule-label">Fecha</label>
@@ -160,7 +161,7 @@ const ScheduleAppointment = () => {
             </div>
             <div className="schedule-input-group">
               <label className="schedule-label">Hora</label>
-              <Select options={availableTimes} onChange={handleTimeChange} placeholder="Selecciona una hora" value={formData.time}  styles={{
+              <Select options={availableTimes} onChange={handleTimeChange} placeholder="Selecciona una hora" value={formData.time} className="schedule-input"  styles={{
                   control: (provided) => ({
                     ...provided,
                     backgroundColor: "#fff",
